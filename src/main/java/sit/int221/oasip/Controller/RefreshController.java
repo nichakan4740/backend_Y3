@@ -9,7 +9,6 @@ import sit.int221.oasip.Service.RefreshService;
 
 import javax.servlet.http.HttpServletRequest;
 
-@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api/refresh")
 public class RefreshController {

@@ -10,7 +10,6 @@ import sit.int221.oasip.Service.UserService;
 
 import java.util.List;
 
-@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api/users")
 class UserController {

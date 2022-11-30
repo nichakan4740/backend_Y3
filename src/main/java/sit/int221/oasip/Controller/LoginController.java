@@ -12,7 +12,7 @@ import sit.int221.oasip.Service.LoginService;
 import sit.int221.oasip.Service.UserService;
 import sit.int221.oasip.config.JwtTokenUtil;
 
-@CrossOrigin(origins = "*")
+
 @RestController
 @RequestMapping("/api/login")
 public class LoginController {

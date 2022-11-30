@@ -8,7 +8,7 @@ import sit.int221.oasip.DTO.LoginDTO;
 import sit.int221.oasip.Service.MatchService;
 import sit.int221.oasip.Service.UserService;
 
-@CrossOrigin(origins = "*")
+
 @RestController
 @RequestMapping("/api/match")
 public class MatchController {

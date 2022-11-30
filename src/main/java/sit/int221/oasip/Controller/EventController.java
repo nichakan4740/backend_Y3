@@ -14,7 +14,6 @@ import sit.int221.oasip.Service.EventService;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/api/events")
 class EventController {
