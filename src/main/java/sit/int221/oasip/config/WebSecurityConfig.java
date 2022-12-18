@@ -65,7 +65,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 //login สามารถเข้าได้โดยไม่ต้องมี token
                 .antMatchers("/api/login","/api/users/signup").permitAll()
-                .antMatchers("/api/files/**").permitAll()
+                .antMatchers("/api/files/**").hasAnyRole("admin","student","guest")
 
                 //admin สามารถดู user ได้ทั้งหมด และสามารถใช้ match ได้
                 .antMatchers("/api/users/**","/api/match/**").hasRole("admin")
@@ -78,8 +78,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.GET, "/api/events","/api/events/{id}").hasAnyRole("admin","student","lecturer")
 
                 //admin student guest สามารถดู add event ได้
-                .antMatchers(HttpMethod.POST, "/api/events").permitAll()
-//                .antMatchers(HttpMethod.POST, "/api/events").hasAnyRole("admin","student","guest")
+//                .antMatchers(HttpMethod.POST, "/api/events").permitAll()
+                .antMatchers(HttpMethod.POST, "/api/events").hasAnyRole("admin","student","guest")
 
                 //admin student สามารถ update event ได้
                 .antMatchers(HttpMethod.PUT, "/api/events/{id}").hasAnyRole("admin","student")

@@ -28,7 +28,7 @@ public class FilesController {
 //        }
 //
     @PostMapping("/{eventId}")
-    public String fileUpload(@RequestParam("file") MultipartFile file, @PathVariable Integer eventId) {
+    public String fileUpload(@RequestPart("file") MultipartFile file, @PathVariable Integer eventId) {
         fileService.store(file, eventId);
         return "You successfully uploaded " + file.getOriginalFilename() + "!";
     }
