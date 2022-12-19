@@ -8,7 +8,7 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
-@Table(name = "EventCategoryOwner")
+@Table(name = "eventCategoryOwner")
 public class EventCategoryOwner {
 
     @Id
